@@ -1,0 +1,32 @@
+// Responsive mixins
+// Usage:
+// @ '../tools/responsive' as spacename;
+//
+// @include spacename.max() {...}
+
+// @mixin max($breakpoint: 55rem){
+//     @media screen and (max-width: $breakpoint) {
+//         @content;
+//     }
+// }
+ 
+// @mixin min($breakpoint: 87.5rem){
+//     @media screen and (min-width: $breakpoint) {
+//         @content;
+//     }
+// }
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media screen and (max-width: 120rem) { @content ; } //1920 px
+   }
+    @else if $point == laptop {
+      @media screen and (max-width: 90rem) { @content ; } //1440 px
+   }
+    @else if $point == tablet {
+      @media screen and (max-width: 64rem) { @content ; } //1024 px
+   }
+   @else if $point == mobile {
+       @media screen and (max-width: 24.375rem) { @content ; } //390 px
+   }
+ }

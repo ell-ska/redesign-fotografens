@@ -1,0 +1,44 @@
+@use '../tools/responsive';
+
+:root{
+    --section-gap: 8rem;
+    --section-gap-small: 5rem;
+    --section-gap-smaller: 4rem;
+
+    --grid-container: minmax(30px, 1fr) [inner-start] minmax(0, 81rem) [inner-end] minmax(30px, 1fr);
+    --grid-inner: repeat(12, 1fr);
+    --grid-gap: 3rem;
+
+    // Change colors
+    --color-light: #fff;
+    --color-dark: #0E1A16;
+    --color-dark-20: rgba(14, 26, 22, 0.2);
+    --color-primary: #B1BCA9;
+    --color-primary-darker: #637953;
+    --color-secondary: #8FBBBE;
+    --color-secondary-darker: #3F6365;
+    
+
+    --font-primary: 'Lexend Deca', sans-serif;
+    --font-secondary: chantal, sans-serif;
+    --font-base: 1.125rem;
+    --font-scale: 1.25;
+    --font-size-0: calc(var(--font-base) / var(--font-scale));
+    --font-size-1: var(--font-base);
+    --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+    --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+    --font-size-4: calc(var(--font-size-3) * var(--font-scale));
+    --font-size-5: calc(var(--font-size-4) * var(--font-scale));
+    --font-size-6: calc(var(--font-size-5) * var(--font-scale));
+    --font-size-7: calc(var(--font-size-6) * var(--font-scale));
+
+    @include responsive.breakpoint(tablet){
+        --grid-gap: 2rem;
+        --section-gap: var(--section-gap-small);
+    }
+
+    @include responsive.breakpoint(mobile){
+        --section-gap-small: 2rem;
+        --font-base: 1rem;
+    }
+}
