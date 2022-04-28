@@ -6,7 +6,7 @@
     grid-template-columns: var(--grid-container);
     color: var(--color-light);
 
-    @include responsive.breakpoint(mobile){
+    @include responsive.breakpoint(tablet){
         display: none;
     }
 

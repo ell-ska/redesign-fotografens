@@ -151,7 +151,7 @@
     color: var(--color-primary-darker);
     padding: var(--section-gap-small) 0 calc(var(--section-gap) * 2);
 
-    @include responsive.breakpoint(mobile){
+    @include responsive.breakpoint(tablet){
         display: none;
     }
 
@@ -288,7 +288,7 @@
     display: grid;
     grid-template-columns: var(--grid-container);
 
-    @include responsive.breakpoint(mobile){
+    @include responsive.breakpoint(tablet){
         display: none;
     }
 
@@ -308,7 +308,7 @@
     grid-template-columns: var(--grid-container);
     color: var(--color-primary-darker);
 
-    @include responsive.breakpoint(mobile){
+    @include responsive.breakpoint(tablet){
         display: none;
     }
 
